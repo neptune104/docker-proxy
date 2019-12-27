@@ -1,15 +1,24 @@
 # Customed by yeom
 > 추가된 파일 목록
 * bundle_chained.crt
-* docker-registry.htpasswd
+* docker-registry.htpasswd (`admin / admin1234` 로 설정되어 있음)
 * private.key
 
 _위에 추가된 파일들은 실제 modusecurity.com 도메인을 이용하는 인증서이므로 함부로 유출하는것을 절대 금함_
-###아래 명령어를 통해 proxy역할을 할 이미지를 빌드
 
-    docker build -t [이미지이름] .
+### proxy역할을 할 이미지를 빌드
 
-###아래 명령어를 통해 proxy역할을 할 이미지를 빌드
+    docker build -t `[이미지이름]` .
+
+### proxy역할을 할 컨테이너 실행
+
+    docker run -d --name proxy-docker -p 443:443 --link `[실행되고 있는 registry 이름]`:registry `[이미지이름]`
+
+### /etc/hosts 파일에 도메인 정보 추가
+
+    123.123.123.123   docker-repo.modusecurity.com modusecurity.com
+
+
 ---
 
 # Docker Registry Reverse Proxy with Basic Auth Nginx Server (marvambass/nginx-registry-proxy)
