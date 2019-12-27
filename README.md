@@ -5,8 +5,12 @@
 * private.key
 
 _위에 추가된 파일들은 실제 modusecurity.com 도메인을 이용하는 인증서이므로 함부로 유출하는것을 절대 금함_
+###아래 명령어를 통해 proxy역할을 할 이미지를 빌드
 
+    docker build -t [이미지이름] .
 
+###아래 명령어를 통해 proxy역할을 할 이미지를 빌드
+---
 
 # Docker Registry Reverse Proxy with Basic Auth Nginx Server (marvambass/nginx-registry-proxy)
 _maintained by MarvAmBass_
