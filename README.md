@@ -1,3 +1,13 @@
+# Customed by yeom
+> 추가된 파일 목록
+* bundle_chained.crt
+* docker-registry.htpasswd
+* private.key
+
+_위에 추가된 파일들은 실제 modusecurity.com 도메인을 이용하는 인증서이므로 함부로 유출하는것을 절대 금함_
+
+
+
 # Docker Registry Reverse Proxy with Basic Auth Nginx Server (marvambass/nginx-registry-proxy)
 _maintained by MarvAmBass_
 
