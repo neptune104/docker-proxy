@@ -26,6 +26,18 @@ _위에 추가된 파일들은 실제 modusecurity.com 도메인을 이용하는
 
 ---
 
+### Link 관련 참고
+아래와 같이 컨테이너가 실행되고 있다고 하면, 컨테이너를 `--link` 할때 사용되어야 하는 `[실행되고 있는 registry 이름]`은 `docker-registry`가 된다.
+
+    [root@~]# docker ps
+    CONTAINER ID        IMAGE                     COMMAND                  CREATED             STATUS              PORTS                          NAMES
+    fed91154fa87        geunsam2/docker-proxy:1   "/opt/entrypoint.sh …"   2 hours ago         Up 2 hours          80/tcp, 0.0.0.0:443->443/tcp   proxy-docker
+    2370d992d87e        registry                  "/entrypoint.sh /etc…"   3 days ago          Up 3 days           0.0.0.0:5000->5000/tcp         docker-registry
+
+
+
+---
+
 # Docker Registry Reverse Proxy with Basic Auth Nginx Server (marvambass/nginx-registry-proxy)
 _maintained by MarvAmBass_
 
