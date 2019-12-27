@@ -18,6 +18,11 @@ _위에 추가된 파일들은 실제 modusecurity.com 도메인을 이용하는
 
     123.123.123.123   docker-repo.modusecurity.com modusecurity.com
 
+### 성공여부 테스트
+
+    docker login https://docker-repo.modusecurity.com
+    Username: admin
+    Password: admin1234
 
 ---
 
