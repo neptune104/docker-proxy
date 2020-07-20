@@ -4,7 +4,6 @@
 * docker-registry.htpasswd (`admin / admin1234` 로 설정되어 있음)
 * private.key
 
-_위에 추가된 파일들은 실제 modusecurity.com 도메인을 이용하는 인증서이므로 함부로 유출하는것을 절대 금함_
 
 ### proxy역할을 할 이미지를 빌드
 
